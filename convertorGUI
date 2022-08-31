@@ -1,0 +1,155 @@
+
+/*
+Chris Kim
+Busan, Korea
+ */
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class convertorGUI {
+    static double num;
+    public static void main(String[] args) {
+        JFrame frame = new JFrame();
+        frame.setSize(600,400);
+        frame.setTitle("Swimming Time Convertor");
+        frame.setLocationByPlatform(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JLabel message = new JLabel();
+
+        JPanel panel = new JPanel();
+        panel.setLayout(new GridLayout(5,3));
+
+        JTextField distance = new JTextField();
+        distance.setText("distance");
+
+        JTextField stroke = new JTextField();
+        stroke.setText("stroke");
+
+        JTextField time = new JTextField();
+        time.setText("event time(sec)");
+
+        //scy to lcm
+        JButton one = new JButton();
+        one.setText("scy->lcm");
+        one.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    num = (Double.parseDouble(time.getText()) * 1.1) + (Double.parseDouble(time.getText())/50);
+                    num = Math.round(num * 100);
+                    num /= 100;
+                    message.setText("of scy from lcm is " + num);
+                } catch(Exception e1) {
+                    message.setText("Error occurred.");
+                }
+            }
+        });
+
+
+        // lcm to scy
+        JButton two = new JButton();
+        two.setText("lcm->scy");
+        two.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    num = (Double.parseDouble(time.getText()) - (Double.parseDouble(time.getText())/50)) / 1.1;
+                    num = Math.round(num * 100);
+                    num /= 100;
+                    message.setText("of lcm to scy is " + num);
+                } catch(Exception e1) {
+                    message.setText("Error occurred.");
+                }
+            }
+        });
+
+
+        // scy to scm
+        JButton three = new JButton();
+        three.setText("scy->scm");
+        three.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    num = (Double.parseDouble(time.getText())) * 1.1;
+                    num = Math.round(num * 100);
+                    num /= 100;
+                    message.setText("of scy to scm is " + num);
+                } catch(Exception e1) {
+                    message.setText("Error occurred.");
+                }
+            }
+        });
+
+        // scm to scy
+        JButton four = new JButton();
+        four.setText("scm->scy");
+        four.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    num = (Double.parseDouble(time.getText())) / 1.1;
+                    num = Math.round(num * 100);
+                    num /= 100;
+                    message.setText("of scm to scy is " + num);
+                } catch(Exception e1) {
+                    message.setText("Error occurred.");
+                }
+            }
+        });
+        // lcm to scm
+        JButton five = new JButton();
+        five.setText("lcm->scm");
+        five.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    num = (Double.parseDouble(time.getText())) * 0.98;
+                    num = Math.round(num * 100);
+                    num /= 100;
+                    message.setText("of lcm to scm is " + num);
+                } catch(Exception e1) {
+                    message.setText("Error occurred.");
+                }
+            }
+        });
+        // scm to lcm
+        JButton six = new JButton();
+        six.setText("scm->lcm");
+        six.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    num = (Double.parseDouble(time.getText())) * 1.02;
+                    num = Math.round(num * 100);
+                    num /= 100;
+                    message.setText("of scm to lcm in is " + num);
+                } catch(Exception e1) {
+                    message.setText("Error occurred.");
+                }
+            }
+        });
+        JButton convert = new JButton();
+        convert.setText("Convert");
+
+
+        // final panel frame.
+        panel.add(distance);
+        panel.add(stroke);
+        panel.add(time);
+        panel.add(one);
+        panel.add(two);
+        panel.add(three);
+        panel.add(four);
+        panel.add(five);
+        panel.add(six);
+        panel.add(new JLabel("The result of the given stroke"));
+        panel.add(message);
+        panel.add(new JLabel("seconds."));
+
+        frame.add(panel);
+        frame.setVisible(true);
+    }
+}
