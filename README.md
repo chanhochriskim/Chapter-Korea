@@ -12,4 +12,4 @@ Reference(s):
 
 # Snake Game in Java
 --------------------------------------------
-- 2nd summer project that i did during summer 2022 before enlisting.
+- 2nd summer project that I developed in summer 2022.
