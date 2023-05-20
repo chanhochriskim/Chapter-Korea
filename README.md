@@ -1,4 +1,12 @@
-# Record Time Conversion for Competitive Swimming
+# Calculator in Java (May 2023)
+--------------------------------------------
+Built a calculator in online compiler. Currently am only working in online compiler as can't download IDE since I'm working on computers in my army base and they are sensitive on downloading stuff online. 
+- Calculator takes two inputs from the user and would handle any invalid input or error. It also wouldn't exit itself unless the user commands it to do so. 
+- Took me a good 2 weeks to get this one done from scractch, and was a good exercise to refresh and expose myself again to programming since last October when I enlisted. 
+- Difficulty level: A weekly assignment for college freshman, I'd say.  
+
+
+# Record Time Conversion for Competitive Swimming (Sep 2022)
 --------------------------------------------
 Users must provide the listed information below to meet the minimum requirements for the converter to function properly:
 1. Events with distance provided.
@@ -10,6 +18,7 @@ Reference(s):
 - https://swimswam.com/swimming-times-conversion-tool/
 - https://hytek.active.com/User_Guides_HTML/SwTM7/HTML/index.html?courseconversion.htm
 
-# Snake Game in Java
+# Snake Game in Java (Sep 2022)
 --------------------------------------------
 - 2nd summer project that I developed in summer 2022.
+
