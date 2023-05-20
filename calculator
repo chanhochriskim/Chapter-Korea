@@ -1,0 +1,131 @@
+/****************************************************************************
+All test cases can run through without crashing the program.
+Program wouldn’t end unless the user commands to.
+*****************************************************************************/
+import java.util.*;
+import java.text.DecimalFormat;
+
+public class Main
+{
+private static final DecimalFormat df = new DecimalFormat("0.000");  
+public static void main(String[] args) throws InterruptedException {
+
+Scanner scanner = new Scanner(System.in);
+
+System.out.println("Chris Kim Calculator, Java edition. Starting date: April 30th, 2023.");
+Thread.sleep(1000);
+
+String cont = "";
+    do {
+        
+        float a = 0;
+        float b = 0;
+        int check = 0;
+        int choice = 0;
+        float ans = 0;
+        
+        System.out.print("First input: ");
+        do {
+        if (scanner.hasNextFloat() || scanner.hasNextInt()) {
+        a = scanner.nextFloat();
+        check++;
+        } else {
+        System.out.print("invalid input. please try again: ");
+        scanner.next(); // THIS FUCKER HAS TO BE INSIDE THE ELSE LOOP, NOT OUTSIDE!
+        }
+        } while (check == 0);
+        
+        check = 0;
+        
+        System.out.print("Good. Now second one: ");
+        do {
+        if (scanner.hasNextFloat() || scanner.hasNextInt()) {
+        b = scanner.nextFloat();
+        check++;
+        } else {
+        System.out.print("invalid input detected. try again: ");
+        scanner.next();
+        }
+        } while (check == 0);
+        
+        System.out.println("Great! Now all inputs have been saved. ");
+        Thread.sleep(1000);
+        
+        System.out.print("1.Add \n2.Subtract \n3.Multiply \n4.Divide \n5.Compare \n6.End\nChoose your operator: ");
+        Thread.sleep(1000);
+
+        int isNumber = 0;
+        do {
+            do {
+            if (scanner.hasNextFloat() || scanner.hasNextInt()) {
+            choice = scanner.nextInt();
+            isNumber++;
+            } else {
+                System.out.print("Your input is not a number. try again. ");
+                scanner.next();
+            }
+            } while (isNumber == 0);
+            
+            isNumber = 0;
+            
+            if (choice == 1) {
+                ans = a+b;
+                System.out.print("Sum of two inputs: " + df.format(ans));
+            } else if (choice == 2) {
+                ans = a-b;
+        
+                System.out.println("subtraction result: " + df.format(ans));
+            } else if (choice == 3) {
+                ans =a*b;
+         
+                System.out.println("multiply of two inputs: " + df.format(ans));
+            } else if (choice == 4) {
+                ans = a/b;
+        
+                System.out.println("division result: " + df.format(ans));
+            } else if (choice == 5) {
+                    if (a > b) {
+                System.out.println("your first input " + a + " is larger than second one of " + b + ".");
+                } else if (b > a) {
+                System.out.println("your second input " + b + " is larger than first one of " + a + ".");
+                } else {
+                System.out.println("Error detected.");
+                }
+            } else if (choice == 6) {
+           
+                System.out.println("System closing...");
+                Thread.sleep(1500);
+                System.out.println("Shutting down.");
+                System.exit(0); 
+            } else if (choice > 6 || choice < 1) {
+                System.out.print("Wrong input. Please try again: ");
+              // NO NEED SCANNER.NEXT() HERE! 
+            } 
+            
+        } while (choice > 6 || choice < 1);
+        
+        System.out.print("\nWould you like to continue using the calculator? (Y/N): ");
+        scanner.next();
+        boolean yn = true;
+        
+        while (yn) {
+            cont = scanner.nextLine();
+            if (cont.equalsIgnoreCase("n")) {
+                System.out.println("System shutting down...");
+                Thread.sleep(1500);
+                System.out.println("Logging off...");
+                Thread.sleep(1000);
+                yn = false;
+            } else if (cont.equalsIgnoreCase("y")){
+                System.out.println("Rebooting the system...");
+                yn = false;
+            } else if ((!cont.equalsIgnoreCase("y")) || (!cont.equalsIgnoreCase("n"))){
+                System.out.print("\nInvalid input. please try again!: ");
+            }
+        }
+        yn = true; 
+    } while (cont.equalsIgnoreCase("y"));
+    System.out.println("Thanks for using Chris Kim calculator.");
+    
+}
+}
