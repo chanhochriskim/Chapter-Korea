@@ -1,3 +1,5 @@
+I am serving in the ROK Army to fulfill my mandatory service. With that being said, I’m taking gap years from Purdue for 2 years, and thought it’d be great to use this time to build a solid academic foundation and better myself in programming in general. Though the condition isn’t the best due to the constant night shifts and work duties as a fulltime Army soldier, I'm still grateful to be able to continue studying, and aim for 1~1.5 hrs to grind every day. 
+
 # Calculator in Java (May 2023)
 --------------------------------------------
 Built a calculator in online compiler. Currently am only working in online compiler as can't download IDE since I'm working on computers in my army base and they are sensitive on downloading stuff online. 
