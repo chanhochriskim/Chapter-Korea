@@ -3,7 +3,7 @@
 Built a calculator in online compiler. Currently am only working in online compiler as can't download IDE since I'm working on computers in my army base and they are sensitive on downloading stuff online. 
 - Calculator takes two inputs from the user and would handle any invalid input or error. It also wouldn't exit itself unless the user commands it to do so. 
 - Took me a good 2 weeks to get this one done from scractch, and was a good exercise to refresh and expose myself again to programming since last October when I enlisted. 
-- Difficulty level: A weekly assignment for college freshman, I'd say.  
+- Difficulty level: A weekly assignment for first year CS class, I'd say. 
 
 
 # Record Time Conversion for Competitive Swimming (Sep 2022)
