@@ -1,4 +1,4 @@
-I am serving in the ROK Army to fulfill my mandatory service. With that being said, I’m taking gap years from Purdue for 2 years, and thought it’d be great to use this time to build a solid academic foundation and better myself in programming in general. Though the condition isn’t the best due to the constant night shifts and work duties as a fulltime Army soldier, I'm still grateful to be able to continue studying, and aim for 1~1.5 hrs to grind every day. - May 20, 2023
+I am currently serving in the ROK Army to fulfill my mandatory service. With that being said, I’m taking gap years from Purdue for 2 years, and thought it’d be great to use this time to build a solid academic foundation and better myself in programming in general. Though the condition isn’t the best due to the constant night shifts and work duties as a fulltime Army soldier, I'm still grateful to be able to continue studying, and aim for 1~1.5 hrs to grind every day. - May 20, 2023
 
 # Calculator in Java (May 2023)
 --------------------------------------------
